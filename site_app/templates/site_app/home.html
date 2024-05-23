@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+{% block title %}Corretor Automático - LIA²{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+  <!-- Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Sair</a></p> -->
+
+  <form method="post" action="{% url 'executar_correcao' %}">
+    {% csrf_token %}
+    <div class="container-personalizado">
+      <div class="minha-div">
+        <div class="container">
+          <div id="pagina1" class="pagina">
+              <h4 class="display-4">Avaliação Individual</h4>
+              {{form_individual|bootstrap}}
+          </div>
+          <div id="pagina2" class="pagina">
+            <h4 class="display-4">Avaliação em Lote</h4>
+              <p>Em Desenvolvimento...</p>
+          </div>
+          <input type="submit" class="btn btn-warning" value="Avaliar" id="botao_avaliar">     
+          <div class="btn-toolbar mb-3" role="toolbar"  aria-label="Toolbar wit     button groups" id="botoes">
+            <div class="btn-group mr-2" role="group"  aria-label="First group">
+              <button type="button" class="btn  btn-secondary" id="btnPagina1">1    </button>
+              <button type="button" class="btn  btn-secondary" id="btnPagina2">2    </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+
+  <script src="{% static 'js/home.js' %}"></script>
+
+
+
+
+{% else %}
+  <p>Você precisa estar logado para acessar!</p>
+  <a href="{% url 'login' %}">Logar</a>
+{% endif %}
+{% endblock content %}

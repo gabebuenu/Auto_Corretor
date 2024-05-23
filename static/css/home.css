@@ -1,0 +1,51 @@
+.pagina {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pagina:first-child {
+    display: block; 
+}
+
+body {
+    background-color: hsl(0, 0%, 95%); /* Branco pastel com saturação e luminosidade reduzidas */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-personalizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.minha-div {
+    width: 80%; /* Largura responsiva (pode ser ajustada conforme necessário) */
+    max-width: 600px; /* Largura máxima */
+    height: 860px; /* Altura (pode ser ajustada conforme necessário) */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #ADD8E6; /* Cor azul pastel */
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px 0;
+      background-color: #f0f0f0;
+    }
+
+#botoes{
+    position: relative;
+    margin-top: 2%;
+    margin-left: 44%;
+}
