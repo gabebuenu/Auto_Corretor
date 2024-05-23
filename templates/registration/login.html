@@ -1,0 +1,67 @@
+{% load bootstrap %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-ZosR9vzO3X6RvJpKz8+9R6TC/rZykZFzg6FZj/    MfL5g5qFfsv5BQJ4hqg0zs5BIl" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh    +oLr5f8JbSKa5Ukhh7P3XrFOkEW5b1KI/tV" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIA² - Corretor - Login</title>
+</head>
+<style>
+    body {
+      /* Para navegadores que suportam diferentes tipos de gradientes */
+      background-color: #003a73; /* Azul escuro */
+      background-image: linear-gradient(to bottom, #000ed3, #3498db); /* Gradiente de azul escuro a azul pastel */
+    }
+
+    footer {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px 0;
+      background-color: #f0f0f0;
+    }
+
+    .container-personalizado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 91vh; /* Altura total da viewport */
+    }
+
+    .minha-div {
+        width: 50%; /* Largura responsiva (pode ser ajustada conforme necessário) */
+        max-width: 400px; /* Largura máxima */
+        height: 300px; /* Altura (pode ser ajustada conforme necessário) */
+        border-radius: 10px; /* Bordas arredondadas */
+        background-color: #ADD8E6; /* Cor azul pastel */
+            
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<body>
+    <div class="container-personalizado">
+        <div class="minha-div">
+            <div class="container">
+                <h2 class="font-weight-bold text-uppercase text-muted">Login</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    <!-- {{ form.as_p }} -->
+                    <br />
+                    <input type="submit" class="btn btn-dark" value="Entrar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+	<p>Feito por: Henrique Leal Tavares | LIA² - Laboratório de Inteligência Artificial | henriquetavares@unimar.br | Unimar - Universidade de Marília</p>
+</footer>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-ZosR9vzO3X6RvJpKz8+9R6TC/rZykZFzg6FZj/    MfL5g5qFfsv5BQJ4hqg0zs5BIl" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh    +oLr5f8JbSKa5Ukhh7P3XrFOkEW5b1KI/tV" crossorigin="anonymous"></script>
+    
+    <title>{% block title %}LIA² - Corretor Automatico{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    {% block content %}
+
+    {% endblock content %}
+
+    {% block scripts %}
+
+    {% endblock %}
+</body>
+<footer>
+	<p> Feito por: Henrique Leal Tavares | LIA² - Laboratório de Inteligencia Artificial | henriquetavares@unimar.br | Unimar - Universidade de Marília. </p> 
+</footer>
+</html>
