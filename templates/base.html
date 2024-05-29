@@ -16,6 +16,11 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 </head>
+<style>
+    .footer{
+        color: white;
+    }
+</style>
 <body>
     {% block content %}
 
@@ -25,7 +30,7 @@
 
     {% endblock %}
 </body>
-<footer>
+<footer class="footer"">
 	<p> Feito por: Henrique Leal Tavares | LIA² - Laboratório de Inteligencia Artificial | henriquetavares@unimar.br | Unimar - Universidade de Marília. </p> 
 </footer>
 </html>
